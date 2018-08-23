@@ -1,0 +1,171 @@
+﻿ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>111</title>
+	<script type="text/javascript" src="vue.min.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		ul{list-style:none;}
+		.dialog{
+		margin-top: 50px;
+		margin-left: 50px;
+		width: 800px;
+		border: 1px solid #DEE2EA;
+		font-family:"Microsoft YaHei";
+		color: black;
+		}
+		.header{
+		border-bottom: #DEE2EA 1px solid;
+		height: 50px;
+		background-color: #F4F5F8;
+		color: #737373;
+		}
+		.content{
+        padding-left: 30px;
+        padding-top:10px; 
+        height: 100px;
+        }
+        .m_body{
+        	padding-right: 100px;
+        	padding-left: 26px;
+        }
+        .itype1{
+        float: left;
+        margin-top: 5px; 
+        }
+        .picture2{
+            padding: 5px 10px 0px 0;
+            margin-top: -35px;
+            float:right;
+        }
+        .username{
+        font-weight: bold; 
+        	}
+        .define{
+        	color: #49ACF2;
+        	font-weight: bold;
+        }
+        .define2{
+            color :black;
+            font-weight: bold;
+        }
+        .section{
+        padding: 10px 0;
+        font-size: 80%;
+        }
+        .item{
+        padding: 10px 0;
+       
+        }
+        .item_header{
+            padding-left:  40px;
+            font-size: 120%;
+        }
+        .itype{
+        float: left;
+        }
+        .contentarea{
+        padding-left: 5px;
+        margin-left: 38px;
+        margin-right: 10px;
+        }
+        .C_Header{
+        padding:  2px 0;
+        font-weight: normal;
+        color: #737373;
+        }
+        .time_a{
+        	padding-right: 10px;
+        	margin-top: -45px;
+        	color:  #A7A8A8;
+        	font-size: 80%;
+        	float: right;
+        }
+        .line{
+        	float: center;
+            width: 650px;
+            border-bottom: 1px inset #A7A8A8;
+            padding-bottom: 40px; 
+        }
+        .line1{
+        	float: bottom;
+            width:600px;
+            border-bottom: 1px inset #A7A8A8;
+            padding-bottom: 80px; 
+        }
+        .line_text{
+            color: blue;
+            float: right;
+            margin-top: -10px;
+        }
+        .item_content{
+        text-align: left;
+        padding-right: 100px;
+        padding-left: 40px;
+        color: #949494;
+        }
+        .ty{
+        	float: right;
+        	position: absolute;
+        	color: #49ACF2;
+        	margin-top:  68px;
+        	padding-left: 520px;
+        }
+        .r_header{
+		position:relative;
+        padding-top: 15px;
+        padding-right: 10px;
+        float:right;
+        font-size: 80%;
+		}
+
+		h2{
+		float: left;
+		padding-top: 10px;
+		padding-left: 25px;
+		color: #737373;
+		font-size: 130%;
+		}
+	</style>
+</head>
+ <body>
+ 	<div class="dialog">
+ 		
+  <div class="header">
+  	<h2>Recent History</h2>
+  	<div class="r_header">
+  		<p>All History <img src="8.png"></p>
+  	</div>
+  </div>
+  <div id="app">
+ 	<ul>
+ 	<li v-for= "obj in objects" class="content">
+ 	<img class="itype" v-bind:src="obj.src"></img>
+ 	<span class="username">{{obj.username}}</span>
+ 	<span class="action">{{obj.action_a}} </span>
+ 	<span class="object_a">{{obj.object_a}}</span>
+ 	<span class="define2">{{obj.define2}}</span>
+ 	<span class="define">{{obj.define}}</span>
+ 	<p class="m_body">{{obj.m_body}}</p>
+ 	<span class="time_a">{{obj.time_a}} </span>
+ 	<div class="line" v-if="obj.seen"></div>
+ 	
+ 	<img class="itype1" v-bind:src="obj.src2">
+ 		<div v-if="obj.none"><div class="line1"><span class="ty">Yesterday</span>
+ 		</div>
+ 	</div>
+ 	</img>
+ 	<img class="picture2" v-bind:src="obj.src1"></img>
+ 	
+
+ </li>
+</ul>
+ 					 
+ 				
+ 	</div>
+  </div> 
+ 
+ </body>
+    <script type="text/javascript" src="./v.js">
+    </script>
+ </html>
